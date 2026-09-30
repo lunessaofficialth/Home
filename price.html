@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lunessa Pet Boutique | Check Service Price</title>
+
+<meta name="description"
+content="Check grooming service prices at Lunessa Pet Boutique.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --cream: #f8f5f0;
+  --ivory: #fffdf9;
+
+  --rose: #d9b7ad;
+  --rose-dark: #a9796d;
+
+  --sage: #aebba7;
+  --sage-dark: #687864;
+
+  --brown: #4f4641;
+  --soft-brown: #776d67;
+
+  --line: #e6ddd5;
+
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family:
+    "Noto Sans Thai",
+    "Noto Sans",
+    "Noto Sans SC",
+    sans-serif;
+
+  background: var(--cream);
+  color: var(--brown);
+
+  line-height: 1.6;
+}
+
+button,
+select,
+a {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255,253,249,0.96);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+
+  max-width: 1180px;
+
+  margin: auto;
+
+  padding: 16px 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+/* LOGO */
+
+.logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.logo-mark {
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: var(--sage);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  font-size: 20px;
+}
+
+.logo-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1.1;
+}
+
+.logo-main {
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 22px;
+
+  letter-spacing: 3px;
+
+  color: var(--sage-dark);
+}
+
+.logo-sub {
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: var(--soft-brown);
+}
+
+/* RIGHT */
+
+.header-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+/* LANGUAGE */
+
+.language {
+
+  display: flex;
+
+  gap: 4px;
+
+  background: var(--cream);
+
+  border-radius: 30px;
+
+  padding: 4px;
+}
+
+.language button {
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--soft-brown);
+
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+.language button.active {
+
+  background: var(--sage-dark);
+
+  color: white;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+  text-align: center;
+
+  padding: 70px 20px 45px;
+
+  background:
+
+    radial-gradient(
+      circle at top left,
+      rgba(216,183,173,0.18),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(174,188,169,0.22),
+      transparent 35%
+    );
+}
+
+.hero-small {
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  color: var(--rose-dark);
+
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 6vw, 58px);
+
+  font-weight: 500;
+
+  color: var(--sage-dark);
+
+  margin-bottom: 12px;
+}
+
+.hero p {
+
+  max-width: 620px;
+
+  margin: auto;
+
+  color: var(--soft-brown);
+
+  font-size: 15px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+
+  width: min(960px, calc(100% - 32px));
+
+  margin: 0 auto 70px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.calculator {
+
+  background: var(--ivory);
+
+  border: 1px solid var(--line);
+
+  border-radius: 24px;
+
+  padding: 32px;
+
+  box-shadow:
+    0 15px 40px rgba(90,70,60,0.06);
+}
+
+/* =========================
+   STEP
+========================= */
+
+.step {
+
+  margin-bottom: 30px;
+}
+
+.step-title {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 14px;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.step-number {
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: var(--sage);
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 13px;
+}
+
+/* =========================
+   PET TYPE
+========================= */
+
+.pet-types {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+}
+
+.pet-button {
+
+  border: 1px solid var(--line);
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+
+  color: var(--brown);
+}
+
+.pet-button:hover {
+
+  transform: translateY(-2px);
+
+  border-color: var(--sage);
+}
+
+.pet-button.active {
+
+  background: #f0f5ee;
+
+  border: 2px solid var(--sage-dark);
+}
+
+.pet-icon {
+
+  font-size: 35px;
+
+  display: block;
+
+  margin-bottom: 5px;
+}
+
+.pet-name {
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+
+  margin-bottom: 20px;
+}
+
+.form-group label {
+
+  display: block;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+select {
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  border: 1px solid var(--line);
+
+  background: white;
+
+  color: var(--brown);
+
+  font-size: 15px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+select:focus {
+
+  border-color: var(--sage-dark);
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.price-result {
+
+  margin-top: 25px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #f1f5ee,
+      #fff8f5
+    );
+
+  border-radius: 20px;
+
+  padding: 28px;
+
+  text-align: center;
+
+  border: 1px solid #e2e9df;
+}
+
+.price-label {
+
+  font-size: 13px;
+
+  color: var(--soft-brown);
+
+  margin-bottom: 5px;
+}
+
+.price {
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 46px;
+
+  color: var(--sage-dark);
+
+  margin-bottom: 5px;
+}
+
+.price-note {
+
+  font-size: 12px;
+
+  color: var(--soft-brown);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.actions {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.btn {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  border: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn:hover {
+
+  transform: translateY(-2px);
+}
+
+.btn-home {
+
+  background: #eee8e2;
+
+  color: var(--brown);
+}
+
+.btn-book {
+
+  background: var(--sage-dark);
+
+  color: white;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.info {
+
+  margin-top: 22px;
+
+  padding: 18px;
+
+  background: #faf7f3;
+
+  border-radius: 14px;
+
+  font-size: 12px;
+
+  color: var(--soft-brown);
+
+  text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+  text-align: center;
+
+  padding: 35px 20px;
+
+  color: var(--soft-brown);
+
+  font-size: 12px;
+}
+
+.footer-brand {
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 20px;
+
+  letter-spacing: 3px;
+
+  color: var(--sage-dark);
+
+  margin-bottom: 6px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .header-inner {
+
+    padding: 12px 15px;
+  }
+
+  .logo-main {
+
+    font-size: 18px;
+  }
+
+  .logo-sub {
+
+    font-size: 7px;
+  }
+
+  .logo-mark {
+
+    width: 36px;
+    height: 36px;
+  }
+
+  .language button {
+
+    padding: 6px 8px;
+
+    font-size: 11px;
+  }
+
+  .hero {
+
+    padding: 50px 20px 35px;
+  }
+
+  .calculator {
+
+    padding: 22px 18px;
+
+    border-radius: 20px;
+  }
+
+  .pet-types {
+
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+  <div class="header-inner">
+
+    <a href="index.html" class="logo">
+
+      <div class="logo-mark">
+        ♡
+      </div>
+
+      <div class="logo-text">
+
+        <div class="logo-main">
+          LUNESSA
+        </div>
+
+        <div class="logo-sub">
+          PET BOUTIQUE
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <div class="header-right">
+
+      <div class="language">
+
+        <button
+          onclick="setLanguage('th')"
+          id="lang-th"
+          class="active">
+          TH
+        </button>
+
+        <button
+          onclick="setLanguage('en')"
+          id="lang-en">
+          EN
+        </button>
+
+        <button
+          onclick="setLanguage('cn')"
+          id="lang-cn">
+          中文
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-small" data-i18n="eyebrow">
+    LUNESSA PET CARE
+  </div>
+
+  <h1 data-i18n="title">
+    เช็คค่าบริการ
+  </h1>
+
+  <p data-i18n="subtitle">
+    เลือกข้อมูลของน้อง แล้วระบบจะคำนวณราคาเบื้องต้นให้คุณ
+  </p>
+
+</section>
+
+
+<!-- =========================
+     CALCULATOR
+========================= -->
+
+<main class="container">
+
+<div class="calculator">
+
+
+<!-- PET TYPE -->
+
+<div class="step">
+
+  <div class="step-title">
+
+    <span class="step-number">
+      1
+    </span>
+
+    <span data-i18n="choosePet">
+      เลือกประเภทน้อง
+    </span>
+
+  </div>
+
+
+  <div class="pet-types">
+
+    <button
+      class="pet-button active"
+      id="dogButton"
+      onclick="selectPet('dog')">
+
+      <span class="pet-icon">
+        🐶
+      </span>
+
+      <span
+        class="pet-name"
+        data-i18n="dog">
+        น้องหมา
+      </span>
+
+    </button>
+
+
+    <button
+      class="pet-button"
+      id="catButton"
+      onclick="selectPet('cat')">
+
+      <span class="pet-icon">
+        🐱
+      </span>
+
+      <span
+        class="pet-name"
+        data-i18n="cat">
+        น้องแมว
+      </span>
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- WEIGHT -->
+
+<div class="step">
+
+  <div class="step-title">
+
+    <span class="step-number">
+      2
+    </span>
+
+    <span data-i18n="weight">
+      น้ำหนัก / ขนาด
+    </span>
+
+  </div>
+
+
+  <div class="form-group">
+
+    <label data-i18n="weightLabel">
+      น้ำหนักของน้อง
+    </label>
+
+    <select id="weight" onchange="calculatePrice()">
+
+      <!-- Filled by JS -->
+
+    </select>
+
+  </div>
+
+</div>
+
+
+<!-- SERVICE -->
+
+<div class="step">
+
+  <div class="step-title">
+
+    <span class="step-number">
+      3
+    </span>
+
+    <span data-i18n="service">
+      เลือกบริการ
+    </span>
+
+  </div>
+
+
+  <div class="form-group">
+
+    <label data-i18n="serviceLabel">
+      บริการที่ต้องการ
+    </label>
+
+    <select id="service" onchange="calculatePrice">
+
+      <!-- Filled by JS -->
+
+    </select>
+
+  </div>
+
+</div>
+
+
+<!-- PRICE -->
+
+<div class="price-result">
+
+  <div
+    class="price-label"
+    data-i18n="estimated">
+    ราคาโดยประมาณ
+  </div>
+
+  <div
+    class="price"
+    id="price">
+    ฿259
+  </div>
+
+  <div
+    class="price-note"
+    data-i18n="priceNote">
+    ราคาจริงอาจแตกต่างตามสภาพขน พฤติกรรม และรายละเอียดของน้อง
+  </div>
+
+</div>
+
+
+<!-- ACTION -->
+
+<div class="actions">
+
+  <a
+    href="index.html"
+    class="btn btn-home"
+    data-i18n="backHome">
+
+    ← กลับหน้า Home
+
+  </a>
+
+
+  <a
+    href="https://lunessaofficialth.github.io/lunessa-booking/"
+    class="btn btn-book"
+    data-i18n="book">
+
+    จองคิว →
+
+  </a>
+
+</div>
+
+
+<div class="info">
+
+  <span data-i18n="info">
+    ราคาที่แสดงเป็นราคาเบื้องต้น กรุณาสอบถามทางร้านอีกครั้งสำหรับน้องที่มีสภาพขนพันกัน ขนสังกะตัง หรือมีพฤติกรรมที่ต้องดูแลเป็นพิเศษ
+  </span>
+
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-brand">
+    LUNESSA
+  </div>
+
+  <div data-i18n="tagline">
+    Gentle Touch, Forever Care
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+let currentLanguage = "th";
+
+
+const translations = {
+
+  th: {
+
+    eyebrow: "LUNESSA PET CARE",
+
+    title: "เช็คค่าบริการ",
+
+    subtitle:
+      "เลือกข้อมูลของน้อง แล้วระบบจะคำนวณราคาเบื้องต้นให้คุณ",
+
+    choosePet:
+      "เลือกประเภทน้อง",
+
+    dog:
+      "น้องหมา",
+
+    cat:
+      "น้องแมว",
+
+    weight:
+      "น้ำหนัก / ขนาด",
+
+    weightLabel:
+      "น้ำหนักของน้อง",
+
+    service:
+      "เลือกบริการ",
+
+    serviceLabel:
+      "บริการที่ต้องการ",
+
+    estimated:
+      "ราคาโดยประมาณ",
+
+    priceNote:
+      "ราคาจริงอาจแตกต่างตามสภาพขน พฤติกรรม และรายละเอียดของน้อง",
+
+    backHome:
+      "← กลับหน้า Home",
+
+    book:
+      "จองคิว →",
+
+    info:
+      "ราคาที่แสดงเป็นราคาเบื้องต้น กรุณาสอบถามทางร้านอีกครั้งสำหรับน้องที่มีสภาพขนพันกัน ขนสังกะตัง หรือมีพฤติกรรมที่ต้องดูแลเป็นพิเศษ",
+
+    tagline:
+      "Gentle Touch, Forever Care"
+
+  },
+
+
+  en: {
+
+    eyebrow: "LUNESSA PET CARE",
+
+    title: "Check Service Price",
+
+    subtitle:
+      "Select your pet's details and get an estimated service price.",
+
+    choosePet:
+      "Choose Your Pet",
+
+    dog:
+      "Dog",
+
+    cat:
+      "Cat",
+
+    weight:
+      "Weight / Size",
+
+    weightLabel:
+      "Your pet's weight",
+
+    service:
+      "Choose Service",
+
+    serviceLabel:
+      "Service",
+
+    estimated:
+      "Estimated Price",
+
+    priceNote:
+      "Final price may vary depending on coat condition, behavior and individual needs.",
+
+    backHome:
+      "← Back Home",
+
+    book:
+      "Book Appointment →",
+
+    info:
+      "The price shown is an initial estimate. Please contact us for pets with severely tangled or matted coats, or pets requiring special care.",
+
+    tagline:
+      "Gentle Touch, Forever Care"
+
+  },
+
+
+  cn: {
+
+    eyebrow: "LUNESSA PET CARE",
+
+    title: "查看服务价格",
+
+    subtitle:
+      "选择宠物资料，系统会为您计算预计服务价格。",
+
+    choosePet:
+      "选择宠物",
+
+    dog:
+      "狗狗",
+
+    cat:
+      "猫咪",
+
+    weight:
+      "体重 / 尺寸",
+
+    weightLabel:
+      "宠物体重",
+
+    service:
+      "选择服务",
+
+    serviceLabel:
+      "服务项目",
+
+    estimated:
+      "预计价格",
+
+    priceNote:
+      "最终价格可能根据毛发状况、性格及护理需求有所调整。",
+
+    backHome:
+      "← 返回首页",
+
+    book:
+      "预约服务 →",
+
+    info:
+      "页面显示的价格为初步估算。如宠物有严重打结、毛毡或需要特别护理，请提前联系我们。",
+
+    tagline:
+      "Gentle Touch, Forever Care"
+
+  }
+
+};
+
+
+/* =====================================================
+   PRICE DATA
+===================================================== */
+
+
+/* DOG */
+
+const dogPrices = {
+
+  short: {
+
+    weights: {
+
+      xs: "< 1–1.9 kg",
+      s: "2–3.9 kg",
+      m: "4–6.4 kg",
+      l: "6.5–9.9 kg",
+      xl: "10–15 kg"
+
+    },
+
+    prices: {
+
+      bath: [259,359,409,459,509],
+
+      shave: [509,609,659,759,809],
+
+      groom: [609,709,759,859,909]
+
+    }
+
+  },
+
+
+  medium: {
+
+    weights: {
+
+      xs: "< 1–1.9 kg",
+      s: "2–3.9 kg",
+      m: "4–6.4 kg",
+      l: "6.5–9.9 kg",
+      xl: "10–15 kg"
+
+    },
+
+    prices: {
+
+      bath: [309,409,459,509,559],
+
+      shave: [559,659,759,809,909],
+
+      groom: [659,759,859,909,1009]
+
+    }
+
+  },
+
+
+  long: {
+
+    weights: {
+
+      xs: "< 1–1.9 kg",
+      s: "2–3.9 kg",
+      m: "4–6.4 kg",
+      l: "6.5–9.9 kg",
+      xl: "10–15 kg"
+
+    },
+
+    prices: {
+
+      bath: [359,459,509,559,609],
+
+      shave: [659,759,859,909,1009],
+
+      groom: [759,859,959,1009,1109]
+
+    }
+
+  }
+
+};
+
+
+/* CAT */
+
+const catPrices = {
+
+  short: {
+
+    weights: {
+
+      xs: "< 1–1.4 kg",
+      s: "1.5–2.9 kg",
+      m: "3–4.4 kg",
+      l: "4.5–4.9 kg",
+      xl: "5–7 kg"
+
+    },
+
+    prices: {
+
+      bath: [309,359,409,459,509],
+
+      shave: [359,459,509,559,609],
+
+      groom: [709,859,909,959,1009]
+
+    }
+
+  },
+
+
+  long: {
+
+    weights: {
+
+      xs: "< 1–1.4 kg",
+      s: "1.5–2.9 kg",
+      m: "3–4.4 kg",
+      l: "4.5–4.9 kg",
+      xl: "5–7 kg"
+
+    },
+
+    prices: {
+
+      bath: [359,459,509,559,609],
+
+      shave: [609,759,809,859,909],
+
+      groom: [709,859,909,959,1009]
+
+    }
+
+  }
+
+};
+
+
+/* =====================================================
+   STATE
+===================================================== */
+
+let selectedPet = "dog";
+
+let selectedCoat = "short";
+
+
+/* =====================================================
+   SELECT PET
+===================================================== */
+
+function selectPet(pet) {
+
+  selectedPet = pet;
+
+  document
+    .getElementById("dogButton")
+    .classList
+    .toggle("active", pet === "dog");
+
+  document
+    .getElementById("catButton")
+    .classList
+    .toggle("active", pet === "cat");
+
+
+  selectedCoat = "short";
+
+  populateWeight();
+
+  populateServices();
+
+  calculatePrice();
+
+}
+
+
+/* =====================================================
+   WEIGHT
+===================================================== */
+
+function populateWeight() {
+
+  const select =
+    document.getElementById("weight");
+
+  select.innerHTML = "";
+
+  const data =
+    selectedPet === "dog"
+      ? dogPrices[selectedCoat]
+      : catPrices[selectedCoat];
+
+
+  Object.entries(data.weights).forEach(
+    ([key, value], index) => {
+
+      const option =
+        document.createElement("option");
+
+      option.value = index;
+
+      option.textContent = value;
+
+      select.appendChild(option);
+
+    }
+  );
+
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+function populateServices() {
+
+  const select =
+    document.getElementById("service");
+
+  select.innerHTML = "";
+
+
+  const services = [
+
+    {
+      value: "bath",
+      th: "อาบน้ำอย่างเดียว",
+      en: "Bath Only",
+      cn: "单独洗澡"
+    },
+
+    {
+      value: "shave",
+      th: "อาบน้ำ + ไถขน",
+      en: "Bath + Shaving",
+      cn: "洗澡 + 剃毛"
+    },
+
+    {
+      value: "groom",
+      th: "อาบน้ำ + ตัดขนทรงกรูม",
+      en: "Bath + Grooming",
+      cn: "洗澡 + 修剪造型"
+    }
+
+  ];
+
+
+  /* Cats do not show grooming style as a separate option
+     in this first version */
+
+  services.forEach(service => {
+
+    const option =
+      document.createElement("option");
+
+    option.value = service.value;
+
+    option.textContent =
+      service[currentLanguage];
+
+    select.appendChild(option);
+
+  });
+
+}
+
+
+/* =====================================================
+   CALCULATE
+===================================================== */
+
+function calculatePrice() {
+
+  const weight =
+    parseInt(
+      document.getElementById("weight").value || 0
+    );
+
+  const service =
+    document.getElementById("service").value;
+
+
+  const data =
+    selectedPet === "dog"
+      ? dogPrices[selectedCoat]
+      : catPrices[selectedCoat];
+
+
+  const price =
+    data.prices[service][weight];
+
+
+  document.getElementById("price")
+    .textContent =
+      "฿" + price.toLocaleString();
+
+}
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+function setLanguage(lang) {
+
+  currentLanguage = lang;
+
+  document.documentElement.lang = lang;
+
+
+  /* Active language */
+
+  document
+    .querySelectorAll(".language button")
+    .forEach(button => {
+
+      button.classList.remove("active");
+
+    });
+
+
+  document
+    .getElementById("lang-" + lang)
+    .classList.add("active");
+
+
+  /* Text */
+
+  document
+    .querySelectorAll("[data-i18n]")
+    .forEach(element => {
+
+      const key =
+        element.dataset.i18n;
+
+      if (translations[lang][key]) {
+
+        element.textContent =
+          translations[lang][key];
+
+      }
+
+    });
+
+
+  populateServices();
+
+  calculatePrice();
+
+}
+
+
+/* =====================================================
+   INIT
+===================================================== */
+
+populateWeight();
+
+populateServices();
+
+calculatePrice();
+
+</script>
+
+</body>
+</html>
