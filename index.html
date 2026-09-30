@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LUNESSA PET BOUTIQUE</title>
+
+  <meta
+    name="description"
+    content="Lunessa Pet Boutique — Gentle care for dogs and cats."
+  />
+
+  <style>
+    :root {
+      --cream: #f8f3ec;
+      --ivory: #fffdf9;
+      --sage: #78886f;
+      --sage-dark: #5f7057;
+      --rose: #c98f88;
+      --rose-light: #ead2cc;
+      --brown: #66584f;
+      --text: #4f4944;
+      --muted: #8b8179;
+      --gold: #b99a6b;
+      --white: #ffffff;
+      --shadow: 0 12px 35px rgba(75, 65, 55, 0.10);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        "Noto Sans Thai",
+        "Noto Sans",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 253, 249, 0.94);
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid rgba(120, 136, 111, 0.12);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+
+      border: 1.5px solid var(--sage);
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: var(--sage);
+      font-size: 20px;
+    }
+
+    .brand-text {
+      line-height: 1.05;
+    }
+
+    .brand-name {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--sage-dark);
+    }
+
+    .brand-sub {
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-top: 5px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: var(--brown);
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--rose);
+    }
+
+    /* LANGUAGE */
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      background: var(--cream);
+      padding: 4px;
+      border-radius: 999px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+
+      padding: 6px 9px;
+      border-radius: 999px;
+
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 12px;
+
+      transition: 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--sage);
+      color: white;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 680px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      max-width: 1180px;
+      margin: auto;
+
+      padding: 70px 24px 90px;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+    .hero-content {
+      padding-left: 10px;
+    }
+
+    .eyebrow {
+      color: var(--rose);
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+
+      font-size: clamp(46px, 6vw, 76px);
+
+      line-height: 0.98;
+
+      color: var(--sage-dark);
+
+      letter-spacing: 2px;
+
+      margin-bottom: 20px;
+    }
+
+    .hero-tagline {
+      font-family: Georgia, serif;
+      font-style: italic;
+
+      font-size: 19px;
+
+      color: var(--rose);
+
+      margin-bottom: 22px;
+    }
+
+    .hero-description {
+      max-width: 500px;
+
+      color: var(--brown);
+
+      font-size: 16px;
+
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      min-height: 52px;
+
+      padding: 0 25px;
+
+      border-radius: 999px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid transparent;
+
+      cursor: pointer;
+
+      font-weight: 600;
+
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--sage);
+      color: white;
+      box-shadow: 0 8px 20px rgba(95, 112, 87, 0.22);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--sage-dark);
+      border-color: var(--sage);
+    }
+
+    /* HERO IMAGE PLACEHOLDER */
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-image {
+      min-height: 510px;
+
+      border-radius: 38px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.45),
+          rgba(120,136,111,0.08)
+        );
+
+      border: 1px solid rgba(120,136,111,0.15);
+
+      box-shadow: var(--shadow);
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image::before {
+      content: "";
+
+      position: absolute;
+
+      width: 320px;
+      height: 320px;
+
+      border-radius: 50%;
+
+      background: var(--rose-light);
+
+      opacity: 0.55;
+
+      top: -100px;
+      right: -80px;
+    }
+
+    .hero-image::after {
+      content: "";
+
+      position: absolute;
+
+      width: 260px;
+      height: 260px;
+
+      border-radius: 50%;
+
+      background: #dce2d6;
+
+      opacity: 0.7;
+
+      bottom: -100px;
+      left: -80px;
+    }
+
+    .image-placeholder {
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 40px;
+
+      z-index: 2;
+    }
+
+    .placeholder-inner {
+      max-width: 300px;
+    }
+
+    .placeholder-icon {
+      font-size: 80px;
+      margin-bottom: 15px;
+      opacity: 0.75;
+    }
+
+    .placeholder-inner h3 {
+      font-family: Georgia, serif;
+      color: var(--sage-dark);
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .placeholder-inner p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* =========================
+       SERVICE INTRO
+    ========================= */
+
+    .section {
+      padding: 90px 24px;
+    }
+
+    .section-inner {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading span {
+      color: var(--rose);
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      color: var(--sage-dark);
+      margin-top: 8px;
+    }
+
+    .section-heading p {
+      max-width: 620px;
+      margin: 12px auto 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* =========================
+       SERVICE CARDS
+    ========================= */
+
+    .services {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .service-card {
+      background: var(--ivory);
+
+      border-radius: var(--radius);
+
+      padding: 30px 22px;
+
+      min-height: 220px;
+
+      border: 1px solid rgba(120,136,111,0.10);
+
+      box-shadow: 0 8px 25px rgba(70,60,50,0.05);
+
+      transition: 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+
+      border-radius: 18px;
+
+      background: var(--cream);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 26px;
+
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-family: Georgia, serif;
+      color: var(--sage-dark);
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       WHY LUNESSA
+    ========================= */
+
+    .about-section {
+      background: var(--ivory);
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 420px;
+
+      border-radius: 32px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #e7ddd3,
+          #d9e0d4
+        );
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 90px;
+    }
+
+    .about-content h2 {
+      font-family: Georgia, serif;
+
+      color: var(--sage-dark);
+
+      font-size: 42px;
+
+      line-height: 1.1;
+
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--brown);
+
+      margin-bottom: 18px;
+
+      font-size: 16px;
+    }
+
+    .values {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 12px;
+
+      margin-top: 28px;
+    }
+
+    .value {
+      padding: 15px;
+
+      background: var(--cream);
+
+      border-radius: 16px;
+
+      font-size: 14px;
+
+      color: var(--sage-dark);
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 90px 24px;
+    }
+
+    .cta-box {
+      max-width: 1000px;
+
+      margin: auto;
+
+      background: var(--sage);
+
+      color: white;
+
+      border-radius: 35px;
+
+      padding: 60px 35px;
+
+      text-align: center;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.08);
+
+      top: -150px;
+      right: -70px;
+    }
+
+    .cta-box h2 {
+      font-family: Georgia, serif;
+
+      font-size: 40px;
+
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      max-width: 600px;
+
+      margin: 0 auto 28px;
+
+      opacity: 0.9;
+    }
+
+    .cta-box .btn-primary {
+      background: white;
+      color: var(--sage-dark);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #f0ebe4;
+
+      padding: 45px 24px 25px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+
+      margin: auto;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      flex-wrap: wrap;
+    }
+
+    .footer-brand h3 {
+      font-family: Georgia, serif;
+
+      letter-spacing: 3px;
+
+      color: var(--sage-dark);
+
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      max-width: 330px;
+    }
+
+    .footer-links {
+      display: flex;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+      align-items: center;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--brown);
+    }
+
+    .copyright {
+      max-width: 1180px;
+
+      margin: 35px auto 0;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(80,70,60,0.1);
+
+      font-size: 12px;
+
+      color: var(--muted);
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 45px;
+      }
+
+      .hero-content {
+        text-align: center;
+        padding: 0;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-image {
+        min-height: 390px;
+      }
+
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .nav {
+        padding: 0 15px;
+      }
+
+      .brand-name {
+        font-size: 18px;
+      }
+
+      .brand-sub {
+        font-size: 7px;
+      }
+
+      .language-switcher {
+        gap: 0;
+      }
+
+      .lang-btn {
+        padding: 5px 7px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 40px 18px 65px;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .hero-image {
+        min-height: 330px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 70px 18px;
+      }
+
+      .section-heading h2 {
+        font-size: 34px;
+      }
+
+      .about-content h2 {
+        font-size: 34px;
+      }
+
+      .values {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 70px 18px;
+      }
+
+      .cta-box {
+        padding: 45px 22px;
+      }
+
+      .cta-box h2 {
+        font-size: 32px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+    <nav class="nav">
+
+      <a href="#" class="brand">
+
+        <div class="brand-mark">
+          ♡
+        </div>
+
+        <div class="brand-text">
+          <div class="brand-name">
+            LUNESSA
+          </div>
+
+          <div class="brand-sub">
+            PET BOUTIQUE
+          </div>
+        </div>
+
+      </a>
+
+      <div class="nav-right">
+
+        <div class="nav-links">
+
+          <a href="#services" data-i18n="navServices">
+            บริการ
+          </a>
+
+          <a href="#about" data-i18n="navAbout">
+            เกี่ยวกับเรา
+          </a>
+
+          <a href="#contact" data-i18n="navContact">
+            ติดต่อ
+          </a>
+
+        </div>
+
+        <div
+          class="language-switcher"
+          aria-label="Language selector"
+        >
+
+          <button
+            class="lang-btn active"
+            data-lang="th"
+          >
+            TH
+          </button>
+
+          <button
+            class="lang-btn"
+            data-lang="en"
+          >
+            EN
+          </button>
+
+          <button
+            class="lang-btn"
+            data-lang="zh"
+          >
+            中文
+          </button>
+
+        </div>
+
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div
+          class="eyebrow"
+          data-i18n="eyebrow"
+        >
+          PET CARE • GROOMING • HOME
+        </div>
+
+        <h1>
+          LUNESSA
+        </h1>
+
+        <!-- TAGLINE intentionally not translated -->
+        <div class="hero-tagline">
+          Gentle Touch, Forever Care
+        </div>
+
+        <p
+          class="hero-description"
+          data-i18n="heroDescription"
+        >
+          พื้นที่เล็ก ๆ ที่เราอยากดูแลน้องหมาและน้องแมว
+          ด้วยความใส่ใจเหมือนดูแลสัตว์เลี้ยงของเราเอง
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            id="bookingButton"
+            class="btn btn-primary"
+            href="#"
+            data-i18n="bookNow"
+          >
+            จองคิว
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="#price"
+            data-i18n="checkPrice"
+          >
+            เช็กราคา
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="hero-image">
+
+          <!--
+            ภาพนี้เป็นพื้นที่สำหรับภาพ AI / รูปจริง
+            ภายหลังสามารถเปลี่ยนเป็น <img> ได้ทันที
+          -->
+
+          <div class="image-placeholder">
+
+            <div class="placeholder-inner">
+
+              <div class="placeholder-icon">
+                🐶🐱
+              </div>
+
+              <h3 data-i18n="imagePlaceholderTitle">
+                พื้นที่สำหรับภาพของ Lunessa
+              </h3>
+
+              <p data-i18n="imagePlaceholderText">
+                สามารถเปลี่ยนเป็นภาพร้านจริง
+                หรือภาพที่สร้างด้วย AI ได้ภายหลัง
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section
+      class="section"
+      id="services"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <span data-i18n="servicesEyebrow">
+            OUR SERVICES
+          </span>
+
+          <h2 data-i18n="servicesTitle">
+            ดูแลน้อง ๆ ในแบบของ Lunessa
+          </h2>
+
+          <p data-i18n="servicesDescription">
+            มากกว่าการอาบน้ำตัดขน เราอยากให้ Lunessa
+            เป็นพื้นที่ที่เจ้าของและสัตว์เลี้ยงรู้สึกสบายใจ
+          </p>
+
+        </div>
+
+
+        <div class="services">
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              ✂️
+            </div>
+
+            <h3 data-i18n="groomingTitle">
+              Grooming
+            </h3>
+
+            <p data-i18n="groomingDescription">
+              บริการอาบน้ำ ตัดขน และดูแลพื้นฐานสำหรับน้องหมาและน้องแมว
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              🏠
+            </div>
+
+            <h3 data-i18n="hotelTitle">
+              Cat Hotel
+            </h3>
+
+            <p data-i18n="hotelDescription">
+              พื้นที่พักสำหรับน้องแมว สำหรับวันที่เจ้าของต้องเดินทาง
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              💳
+            </div>
+
+            <h3 data-i18n="walletTitle">
+              Lunessa Wallet
+            </h3>
+
+            <p data-i18n="walletDescription">
+              ระบบเติมเงินและสิทธิประโยชน์สำหรับลูกค้าที่ใช้บริการเป็นประจำ
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              ♡
+            </div>
+
+            <h3 data-i18n="careTitle">
+              Pet Care
+            </h3>
+
+            <p data-i18n="careDescription">
+              การดูแลเล็ก ๆ น้อย ๆ ที่ช่วยให้น้องสะอาด สบายตัว และได้รับการดูแลอย่างอ่อนโยน
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section
+      class="section about-section"
+      id="about"
+    >
+
+      <div class="section-inner">
+
+        <div class="about-grid">
+
+          <div class="about-image">
+            🐾
+          </div>
+
+
+          <div class="about-content">
+
+            <h2 data-i18n="aboutTitle">
+              บ้านเล็ก ๆ
+              สำหรับคนรักสัตว์
+            </h2>
+
+            <p data-i18n="aboutText1">
+              Lunessa เป็นร้านเล็ก ๆ ที่ตั้งใจสร้างพื้นที่
+              ให้เจ้าของรู้สึกไว้ใจเมื่อต้องฝากน้องไว้กับเรา
+            </p>
+
+            <p data-i18n="aboutText2">
+              เราไม่ได้ตั้งใจเป็นร้านที่หรูที่สุด
+              แต่เราอยากเป็นร้านที่ลูกค้ารู้สึกว่า
+              “กลับมาแล้วเจอกันเหมือนเดิม”
+            </p>
+
+
+            <div class="values">
+
+              <div
+                class="value"
+                data-i18n="value1"
+              >
+                ♡ ดูแลอย่างอ่อนโยน
+              </div>
+
+              <div
+                class="value"
+                data-i18n="value2"
+              >
+                🐾 ใส่ใจแต่ละตัว
+              </div>
+
+              <div
+                class="value"
+                data-i18n="value3"
+              >
+                🏠 บรรยากาศเป็นกันเอง
+              </div>
+
+              <div
+                class="value"
+                data-i18n="value4"
+              >
+                🤍 ดูแลเหมือนคนในบ้าน
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="cta-box">
+
+        <h2 data-i18n="ctaTitle">
+          พร้อมพาน้องมาเจอกันหรือยัง?
+        </h2>
+
+        <p data-i18n="ctaText">
+          เลือกบริการที่ต้องการ แล้วให้เราดูแลน้อง ๆ
+          อย่างเต็มที่ในแบบของ Lunessa
+        </p>
+
+        <a
+          id="ctaBookingButton"
+          class="btn btn-primary"
+          href="#"
+          data-i18n="bookAppointment"
+        >
+          จองบริการ
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!--
+      Anchor สำหรับ Price
+      ตอนนี้ยังไม่เชื่อมไป Repo จริง
+    -->
+
+    <div id="price"></div>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer id="contact">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <h3>
+          LUNESSA
+        </h3>
+
+        <p data-i18n="footerDescription">
+          Pet Boutique สำหรับคนที่อยากให้สัตว์เลี้ยง
+          ได้รับการดูแลอย่างอ่อนโยน
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a
+          href="#services"
+          data-i18n="footerServices"
+        >
+          บริการ
+        </a>
+
+        <a
+          href="#about"
+          data-i18n="footerAbout"
+        >
+          เกี่ยวกับเรา
+        </a>
+
+        <a
+          href="#contact"
+          data-i18n="footerContact"
+        >
+          ติดต่อ
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 LUNESSA PET BOUTIQUE
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /*
+      =========================================
+      LUNESSA HOME
+      LANGUAGE SYSTEM
+      =========================================
+
+      TH = Thai
+      EN = English
+      ZH = Chinese
+
+      ทุกข้อความที่มี data-i18n
+      จะเปลี่ยนภาษาทันทีเมื่อเลือกภาษา
+    */
+
+
+    const translations = {
+
+      th: {
+
+        navServices: "บริการ",
+        navAbout: "เกี่ยวกับเรา",
+        navContact: "ติดต่อ",
+
+        eyebrow: "PET CARE • GROOMING • HOME",
+
+        heroDescription:
+          "พื้นที่เล็ก ๆ ที่เราอยากดูแลน้องหมาและน้องแมว ด้วยความใส่ใจเหมือนดูแลสัตว์เลี้ยงของเราเอง",
+
+        bookNow: "จองคิว",
+
+        checkPrice: "เช็กราคา",
+
+        imagePlaceholderTitle:
+          "พื้นที่สำหรับภาพของ Lunessa",
+
+        imagePlaceholderText:
+          "สามารถเปลี่ยนเป็นภาพร้านจริง หรือภาพที่สร้างด้วย AI ได้ภายหลัง",
+
+        servicesEyebrow:
+          "OUR SERVICES",
+
+        servicesTitle:
+          "ดูแลน้อง ๆ ในแบบของ Lunessa",
+
+        servicesDescription:
+          "มากกว่าการอาบน้ำตัดขน เราอยากให้ Lunessa เป็นพื้นที่ที่เจ้าของและสัตว์เลี้ยงรู้สึกสบายใจ",
+
+        groomingTitle:
+          "Grooming",
+
+        groomingDescription:
+          "บริการอาบน้ำ ตัดขน และดูแลพื้นฐานสำหรับน้องหมาและน้องแมว",
+
+        hotelTitle:
+          "Cat Hotel",
+
+        hotelDescription:
+          "พื้นที่พักสำหรับน้องแมว สำหรับวันที่เจ้าของต้องเดินทาง",
+
+        walletTitle:
+          "Lunessa Wallet",
+
+        walletDescription:
+          "ระบบเติมเงินและสิทธิประโยชน์สำหรับลูกค้าที่ใช้บริการเป็นประจำ",
+
+        careTitle:
+          "Pet Care",
+
+        careDescription:
+          "การดูแลเล็ก ๆ น้อย ๆ ที่ช่วยให้น้องสะอาด สบายตัว และได้รับการดูแลอย่างอ่อนโยน",
+
+        aboutTitle:
+          "บ้านเล็ก ๆ สำหรับคนรักสัตว์",
+
+        aboutText1:
+          "Lunessa เป็นร้านเล็ก ๆ ที่ตั้งใจสร้างพื้นที่ให้เจ้าของรู้สึกไว้ใจเมื่อต้องฝากน้องไว้กับเรา",
+
+        aboutText2:
+          "เราไม่ได้ตั้งใจเป็นร้านที่หรูที่สุด แต่เราอยากเป็นร้านที่ลูกค้ารู้สึกว่า “กลับมาแล้วเจอกันเหมือนเดิม”",
+
+        value1:
+          "♡ ดูแลอย่างอ่อนโยน",
+
+        value2:
+          "🐾 ใส่ใจแต่ละตัว",
+
+        value3:
+          "🏠 บรรยากาศเป็นกันเอง",
+
+        value4:
+          "🤍 ดูแลเหมือนคนในบ้าน",
+
+        ctaTitle:
+          "พร้อมพาน้องมาเจอกันหรือยัง?",
+
+        ctaText:
+          "เลือกบริการที่ต้องการ แล้วให้เราดูแลน้อง ๆ อย่างเต็มที่ในแบบของ Lunessa",
+
+        bookAppointment:
+          "จองบริการ",
+
+        footerDescription:
+          "Pet Boutique สำหรับคนที่อยากให้สัตว์เลี้ยงได้รับการดูแลอย่างอ่อนโยน",
+
+        footerServices:
+          "บริการ",
+
+        footerAbout:
+          "เกี่ยวกับเรา",
+
+        footerContact:
+          "ติดต่อ"
+      },
+
+
+      en: {
+
+        navServices: "Services",
+        navAbout: "About Us",
+        navContact: "Contact",
+
+        eyebrow: "PET CARE • GROOMING • HOME",
+
+        heroDescription:
+          "A small, warm space where we care for dogs and cats with the same attention we would give our own pets.",
+
+        bookNow: "Book an Appointment",
+
+        checkPrice: "Check Prices",
+
+        imagePlaceholderTitle:
+          "Lunessa Image",
+
+        imagePlaceholderText:
+          "This space can later be replaced with real shop photography or an AI-generated image.",
+
+        servicesEyebrow:
+          "OUR SERVICES",
+
+        servicesTitle:
+          "Care, the Lunessa way",
+
+        servicesDescription:
+          "More than grooming. We want Lunessa to be a comfortable place for both pets and their people.",
+
+        groomingTitle:
+          "Grooming",
+
+        groomingDescription:
+          "Bathing, grooming and basic care for dogs and cats.",
+
+        hotelTitle:
+          "Cat Hotel",
+
+        hotelDescription:
+          "A comfortable space for cats when their families are away.",
+
+        walletTitle:
+          "Lunessa Wallet",
+
+        walletDescription:
+          "A prepaid wallet with benefits for regular customers.",
+
+        careTitle:
+          "Pet Care",
+
+        careDescription:
+          "Gentle everyday care to help your pet stay clean, comfortable and well cared for.",
+
+        aboutTitle:
+          "A little home for pet lovers",
+
+        aboutText1:
+          "Lunessa is a small pet boutique created to give pet parents a place they can feel comfortable leaving their pets with us.",
+
+        aboutText2:
+          "We are not trying to be the most luxurious shop. We simply want to be the place where customers feel, “It is good to see you again.”",
+
+        value1:
+          "♡ Gentle care",
+
+        value2:
+          "🐾 Individual attention",
+
+        value3:
+          "🏠 A warm atmosphere",
+
+        value4:
+          "🤍 Care like family",
+
+        ctaTitle:
+          "Ready to meet Lunessa?",
+
+        ctaText:
+          "Choose the service you need and let us take care of your pet the Lunessa way.",
+
+        bookAppointment:
+          "Book a Service",
+
+        footerDescription:
+          "A pet boutique for people who want their pets to be cared for gently.",
+
+        footerServices:
+          "Services",
+
+        footerAbout:
+          "About Us",
+
+        footerContact:
+          "Contact"
+      },
+
+
+      zh: {
+
+        navServices: "服务",
+        navAbout: "关于我们",
+        navContact: "联系我们",
+
+        eyebrow: "PET CARE • GROOMING • HOME",
+
+        heroDescription:
+          "一个温暖的小空间，用心照顾每一只狗狗和猫咪，就像照顾自己的宠物一样。",
+
+        bookNow: "预约服务",
+
+        checkPrice: "查看价格",
+
+        imagePlaceholderTitle:
+          "Lunessa 图片区域",
+
+        imagePlaceholderText:
+          "之后可以替换成店铺真实照片或 AI 生成的图片。",
+
+        servicesEyebrow:
+          "OUR SERVICES",
+
+        servicesTitle:
+          "Lunessa 式的宠物护理",
+
+        servicesDescription:
+          "不只是美容护理，我们希望 Lunessa 成为宠物和主人都能感到安心的地方。",
+
+        groomingTitle:
+          "Grooming",
+
+        groomingDescription:
+          "为狗狗和猫咪提供洗澡、美容及基础护理服务。",
+
+        hotelTitle:
+          "Cat Hotel",
+
+        hotelDescription:
+          "当主人外出时，为猫咪提供舒适的住宿空间。",
+
+        walletTitle:
+          "Lunessa Wallet",
+
+        walletDescription:
+          "为长期使用服务的顾客提供充值及会员福利。",
+
+        careTitle:
+          "Pet Care",
+
+        careDescription:
+          "温柔的日常护理，让宠物保持干净、舒适并得到细心照顾。",
+
+        aboutTitle:
+          "给爱宠人士的小小家园",
+
+        aboutText1:
+          "Lunessa 是一家小型宠物精品店，希望让每一位主人在把宠物交给我们时都能感到安心。",
+
+        aboutText2:
+          "我们并不追求成为最奢华的宠物店，只希望成为一个让顾客再次回来时，依然感到熟悉和温暖的地方。",
+
+        value1:
+          "♡ 温柔护理",
+
+        value2:
+          "🐾 用心对待每一只宠物",
+
+        value3:
+          "🏠 温暖舒适的氛围",
+
+        value4:
+          "🤍 像家人一样照顾",
+
+        ctaTitle:
+          "准备好和 Lunessa 见面了吗？",
+
+        ctaText:
+          "选择您需要的服务，让我们用 Lunessa 的方式好好照顾您的宠物。",
+
+        bookAppointment:
+          "预约服务",
+
+        footerDescription:
+          "为希望宠物得到温柔照顾的主人而设的 Pet Boutique。",
+
+        footerServices:
+          "服务",
+
+        footerAbout:
+          "关于我们",
+
+        footerContact:
+          "联系我们"
+      }
+
+    };
+
+
+    /*
+      =========================================
+      BOOKING URL
+      =========================================
+
+      แยก URL เป็น 2 ส่วนเพื่อให้โค้ดอ่านง่าย
+    */
+
+    const BOOKING_URL =
+      "https://" +
+      "lunessaofficialth.github.io/lunessa-booking/";
+
+
+    /*
+      =========================================
+      CHANGE LANGUAGE
+      =========================================
+    */
+
+    function changeLanguage(lang) {
+
+      const language = translations[lang];
+
+      if (!language) return;
+
+
+      /*
+        เปลี่ยนทุก element
+        ที่มี data-i18n
+      */
+
+      document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+          const key =
+            element.getAttribute("data-i18n");
+
+          if (
+            language[key] !== undefined
+          ) {
+
+            element.textContent =
+              language[key];
+
+          }
+
+        });
+
+
+      /*
+        เปลี่ยน <html lang="">
+      */
+
+      document.documentElement.lang =
+        lang === "zh"
+          ? "zh"
+          : lang;
+
+
+      /*
+        เปลี่ยน active language
+      */
+
+      document
+        .querySelectorAll(".lang-btn")
+        .forEach(button => {
+
+          button.classList.toggle(
+            "active",
+            button.dataset.lang === lang
+          );
+
+        });
+
+
+      /*
+        จำภาษาของลูกค้า
+      */
+
+      localStorage.setItem(
+        "lunessaLanguage",
+        lang
+      );
+
+    }
+
+
+    /*
+      =========================================
+      LANGUAGE BUTTONS
+      =========================================
+    */
+
+    document
+      .querySelectorAll(".lang-btn")
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            changeLanguage(
+              button.dataset.lang
+            );
+
+          }
+        );
+
+      });
+
+
+    /*
+      =========================================
+      BOOKING BUTTONS
+      =========================================
+    */
+
+    document
+      .getElementById("bookingButton")
+      .href = BOOKING_URL;
+
+
+    document
+      .getElementById("ctaBookingButton")
+      .href = BOOKING_URL;
+
+
+    /*
+      =========================================
+      LOAD SAVED LANGUAGE
+      =========================================
+
+      ถ้าเคยเลือกภาษาไว้แล้ว
+      เปิดเว็บครั้งต่อไปจะใช้ภาษานั้นทันที
+    */
+
+    const savedLanguage =
+      localStorage.getItem(
+        "lunessaLanguage"
+      );
+
+
+    if (
+      savedLanguage &&
+      translations[savedLanguage]
+    ) {
+
+      changeLanguage(
+        savedLanguage
+      );
+
+    } else {
+
+      changeLanguage("th");
+
+    }
+
+  </script>
+
+</body>
+</html>
