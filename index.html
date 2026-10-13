@@ -670,7 +670,7 @@ header {
   display: grid;
 
   grid-template-columns:
-    repeat(4,1fr);
+    repeat(5,1fr);
 
   gap: 15px;
 
@@ -854,6 +854,29 @@ header {
 
 }
 
+
+/* shop icon */
+.quick-icon.icon-shop::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 17px;
+  border: 1.6px solid var(--sage-dark);
+  border-radius: 3px;
+  left: 10px;
+  top: 16px;
+}
+.quick-icon.icon-shop::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 7px;
+  border: 1.5px solid var(--sage-dark);
+  border-bottom: 0;
+  border-radius: 7px 7px 0 0;
+  left: 15px;
+  top: 10px;
+}
 
 /* hotel icon */
 
@@ -2328,6 +2351,28 @@ data-i18n="quickHotelText">
 
 </a>
 
+<a
+href="shop.html"
+class="quick-card">
+
+
+<div class="quick-icon icon-shop" aria-hidden="true"></div>
+
+
+<h3
+data-i18n="quickShop">
+สินค้า
+</h3>
+
+
+<p
+data-i18n="quickShopText">
+เลือกชมสินค้าและสั่งซื้อออนไลน์
+</p>
+
+
+</a>
+
 
 </div>
 
@@ -3089,6 +3134,12 @@ quickHotel:
 quickHotelText:
 "พื้นที่พักสำหรับน้องแมว",
 
+quickShop:
+"สินค้า",
+
+quickShopText:
+"เลือกชมสินค้าและสั่งซื้อออนไลน์",
+
 /* ABOUT */
 
 aboutLabel:
@@ -3292,6 +3343,12 @@ quickHotel:
 quickHotelText:
 "A comfortable stay for your cat",
 
+quickShop:
+"Shop",
+
+quickShopText:
+"Browse products and shop online",
+
 aboutLabel:
 "ABOUT LUNESSA",
 
@@ -3484,6 +3541,12 @@ quickHotel:
 
 quickHotelText:
 "为猫咪准备的舒适住宿空间",
+
+quickShop:
+"商品",
+
+quickShopText:
+"浏览商品并在线选购",
 
 aboutLabel:
 "ABOUT LUNESSA",
