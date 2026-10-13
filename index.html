@@ -263,6 +263,27 @@ header {
 }
 
 
+.nav-links a.nav-shop {
+  color: var(--sage-dark);
+  border: 1px solid rgba(95, 116, 95, .3);
+  border-radius: 999px;
+  padding: 8px 17px;
+  font-weight: 600;
+  background: rgba(223, 231, 220, .35);
+}
+.nav-links a.nav-shop::after { display: none; }
+.nav-links a.nav-shop:hover {
+  color: #fff;
+  background: var(--sage-dark);
+  border-color: var(--sage-dark);
+}
+@media(max-width:900px) {
+  .nav-links a.nav-shop {
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+}
+
 /* LANGUAGES */
 
 .nav-actions {
@@ -1999,6 +2020,13 @@ data-i18n="navServices">
 </a>
 
 <a
+href="shop.html"
+class="nav-shop"
+data-i18n="navProducts">
+สินค้า
+</a>
+
+<a
 href="#about"
 data-i18n="navAbout">
 เกี่ยวกับเรา
@@ -2999,6 +3027,7 @@ const translations = {
 th: {
 
 navServices: "บริการ",
+navProducts: "สินค้า",
 navAbout: "เกี่ยวกับเรา",
 navContact: "ติดต่อเรา",
 navLocation: "โลเคชั่น",
@@ -3197,6 +3226,9 @@ en: {
 navServices:
 "Services",
 
+navProducts:
+"Shop",
+
 navAbout:
 "About Us",
 
@@ -3386,6 +3418,9 @@ zh: {
 
 navServices:
 "服务",
+
+navProducts:
+"商品",
 
 navAbout:
 "关于我们",
